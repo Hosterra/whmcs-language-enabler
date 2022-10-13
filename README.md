@@ -1,25 +1,16 @@
-# Disable languages from the WHMCS client area #
+# Language Enabler for WHMCS
 
-With this module you can easily disable languages from the WHMCS client area.
+Enable & disable available languages in WHMCS.
 
-## How to use ##
+## How to use
 
-### 1. Upload files ###
+ _-- coming soon, not released yet --_
 
-Copy the *disable_languages* folder in *modules/addons/* to your WHMCS installation.
+## Contributing
 
-### 2. Activate the module ###
+Before submitting an issue or a pull request, please read the [contribution guidelines](CONTRIBUTING.md).
 
-* In the WHMCS admin area navigate to *Setup->Addon Modules*.
-* Find the module *Disable Languages* and activate it.
-* Don't forget to configure the permissions!
+> ⚠️ The `master` branch is the current development state of the module. If you want a stable, production-ready version, please pick the last official [release](https://github.com/Hosterra/whmcs-language-enabler/releases).
 
-### 3. Configure the module ###
-
-* Navigate to *Addons->Disable Languages*.
-* select the language you want to be available from de client area.
-* Hit the save button.
-
-### 4. Done ###
-
-* Check your client area
+## Attribution
+Language Enabler for WHMCS is a fork of [Disable languages from the WHMCS client area](https://github.com/stijnvanouplines/whmcs-disable-languages). The main work was initialy done by [Stijn Vanouplines](https://github.com/stijnvanouplines). I would like to thank him for this! 
