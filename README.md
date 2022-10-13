@@ -5,9 +5,15 @@ Enable & disable available languages in WHMCS.
 ![PHP 7.x Compatibility](https://img.shields.io/badge/PHP-7.x-7c86b4?style=flat-square) ![WHCMS 8.5.x Compatibility](https://img.shields.io/badge/WHMCS-8.5.x-96be4f?style=flat-square)
 
 
-## How to use
+## How to install
+1. In your WHCMS installation, in the `modules/addons`, create a `language_enabler`directory.
+2. Download the last [release](https://github.com/Hosterra/whmcs-language-enabler/releases).
+3. Unzip & copy all files in the `language_enabler`directory.
+4. Activate the addon in the **_Setup->Addon Modules_** section of WHMCS admin, then set the right permissions.
 
- _-- coming soon, not released yet --_
+## User selectable languages configuration
+1. In the main menu of the WHMCS admin, go to _**Addons->Language Enabler**_ then, select the languages you want to be selectable.
+2. Save!
 
 ## Contributing
 
