@@ -1,6 +1,6 @@
 <?php
 
-namespace WHMCS\Module\Addon\DisableLanguages\Admin;
+namespace WHMCS\Module\Addon\LanguageEnabler\Admin;
 
 class AdminDispatcher {
 

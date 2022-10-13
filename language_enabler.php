@@ -5,21 +5,21 @@ if ( ! defined( 'WHMCS' ) ) {
 }
 
 use WHMCS\Database\Capsule;
-use WHMCS\Module\Addon\DisableLanguages\Admin\AdminDispatcher;
+use WHMCS\Module\Addon\LanguageEnabler\Admin\AdminDispatcher;
 
 /**
  * Define addon module configuration parameters.
  *
  * @return array
  */
-function disable_languages_config()
+function language_enabler_config()
 {
     return array(
-        'name'          => 'Disable Languages',
-        'description'   => 'With this module you can easily disable languages from the WHMCS client area.',
-        'author'        => 'Solitweb',
+        'name'          => 'Language Enabler',
+        'description'   => 'This module allows to enable or disable available languages.',
+        'author'        => 'Hosterra',
         'language'      => 'english',
-        'version'       => '1.0',
+        'version'       => '1.0.0',
         'fields'        => []
     );
 }
@@ -29,18 +29,18 @@ function disable_languages_config()
  *
  * @return array Optional success/failure message
  */
-function disable_languages_activate()
+function language_enabler_activate()
 {
 	$LANG = $vars['_lang'];
 
 	try {
-		if ( ! Capsule::schema()->hasTable( 'mod_disable_languages' ) ) {
-			Capsule::schema()->create( 'mod_disable_languages', function ( $table ) {
+		if ( ! Capsule::schema()->hasTable( 'mod_language_enabler' ) ) {
+			Capsule::schema()->create( 'mod_language_enabler', function ( $table ) {
 				$table->increments( 'id' );
 				$table->json( 'enabled' )->nullable();
             });
             
-            Capsule::table( 'mod_disable_languages' )->insert([
+            Capsule::table( 'mod_language_enabler' )->insert([
                 'enabled' => json_encode( array() ),
             ]);
 		}
@@ -62,10 +62,10 @@ function disable_languages_activate()
  *
  * @return array Optional success/failure message
  */
-function disable_languages_deactivate()
+function language_enabler_deactivate()
 {
 	try {
-        Capsule::schema()->dropIfExists( 'mod_disable_languages' );
+        Capsule::schema()->dropIfExists( 'mod_language_enabler' );
 
 		return [
 			'status'        => 'success',
@@ -85,7 +85,7 @@ function disable_languages_deactivate()
  *
  * @return string
  */
-function disable_languages_output( $vars )
+function language_enabler_output( $vars )
 {
     $action = isset( $_REQUEST['action'] ) ? $_REQUEST['action'] : '';
 

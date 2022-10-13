@@ -1,6 +1,6 @@
 <?php
 
-namespace WHMCS\Module\Addon\DisableLanguages\Admin;
+namespace WHMCS\Module\Addon\LanguageEnabler\Admin;
 
 use WHMCS\Database\Capsule;
 
@@ -19,7 +19,7 @@ class Controller {
 
         $LANG = $vars['_lang'];
 
-        $getEnabled = Capsule::table( 'mod_disable_languages' )->first();
+        $getEnabled = Capsule::table( 'mod_language_enabler' )->first();
 
         $enabled = json_decode( $getEnabled->enabled );
 
@@ -120,9 +120,9 @@ EOF;
         }
 
         try {
-            $get = Capsule::table( 'mod_disable_languages' )->first();
+            $get = Capsule::table( 'mod_language_enabler' )->first();
 
-            $action = Capsule::table( 'mod_disable_languages' )
+            $action = Capsule::table( 'mod_language_enabler' )
                 ->where( 'id', $get->id )
                 ->update([
                     'enabled' => json_encode($locales),
