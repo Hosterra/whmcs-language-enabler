@@ -2,6 +2,9 @@
 
 Enable & disable available languages in WHMCS.
 
+![WHCMS Compatibility](https://img.shields.io/badge/WHMCS-8.5.x-96be4f?style=flat-square)
+
+
 ## How to use
 
  _-- coming soon, not released yet --_
